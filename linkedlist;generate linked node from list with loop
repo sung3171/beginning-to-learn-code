@@ -1,10 +1,17 @@
-#generate nodes in a loop? 
-#https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop
 '''
-I refer below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
+below is the reason why you have to turn the list to nodes at compiler
+Code challenge sites like LeetCode, turn the JSON-like input into linked lists for you before calling your solution code. 
+So when you want to run your code locally, outside that framework, you'll have to convert these standard lists to linked lists first, 
+and after you run the code, you'll have to turn the returned linked list back to something printable as well:
+https://stackoverflow.com/questions/72597517/attributeerror-list-object-has-no-attribute-val-in-linked-list-leetcode-cha
+
+generate nodes in a loop? 
+https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop
+
+I refer to below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
 like node1; 2->4->3 from l1 = [2,4,3] Likewise l2 = [5,6,4] 
 why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
-
+'''
 
 def make_nodes(n):
     nodes = []
