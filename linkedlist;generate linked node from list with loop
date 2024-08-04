@@ -3,8 +3,8 @@
 '''
 I refer below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
 like node1; 2->4->3 from l1 = [2,4,3] Likewise l2 = [5,6,4] 
-why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew above code was needed. 
-'''
+why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
+
 
 def make_nodes(n):
     nodes = []
