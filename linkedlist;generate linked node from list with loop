@@ -1,5 +1,7 @@
 '''
-the comment trouble out when i got list into solution
+"'list' object has no attribute 'val'"    the comment trouble out when i got list into solution
+why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
+i needed nodes like node1; 2->4->3 turned from l1 = [2,4,3] Likewise l2 = [5,6,4]  the comment trouble out when i got list into solution
 
 below is the reason why you have to turn the list to nodes at compiler
 Code challenge sites like LeetCode, turn the JSON-like input into linked lists for you before calling your solution code. 
@@ -8,12 +10,8 @@ and after you run the code, you'll have to turn the returned linked list back to
 https://stackoverflow.com/questions/72597517/attributeerror-list-object-has-no-attribute-val-in-linked-list-leetcode-cha
 
 
-i needed nodes like node1; 2->4->3 turned from l1 = [2,4,3] Likewise l2 = [5,6,4]  the comment trouble out when i got list into solution
-why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
-
 I referred to concept from below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
 https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop    generate nodes in a loop? 
-
 let's get started! 
 '''
 
@@ -65,6 +63,7 @@ def insertdataatposition(head,data,position):
     current.next=newnode(data).next
     current.next=newnode(data)
 
+#below codes are today's essential parts!
 def linkingnodefromlist(list):
     nodesinlist=[node(list[0])]  #list[0] is nodehead 
     for i,j in enumerate(list[1::]):  #[1::] the reason of 1 is due to above line nodehead already written
