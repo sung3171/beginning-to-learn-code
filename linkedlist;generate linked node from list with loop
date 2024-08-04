@@ -26,6 +26,42 @@ for node in nodes:
 
 
 
-
 #still maintaining... due to this old military computer down. my written code flew away.
+#let's start again
+
+Class node:
+    def __init__(self,data):
+        self.data=data
+        sefl.next=None
+
+def traverse(head):
+    currentnode=head
+    while currentnode:
+        print(currentnode.data,end="->")
+        head=head.next
+    print("null")
+
+def insertdataatposition(head,data,position)
+    if position==1:
+        return head.next=node(data)
+    current=head
+    newnode=node(data)
+    for _ in range(position-2):
+        if current.next==None:
+            break
+        current=current.next
+    current.next=newnode(data).next
+    current.next=newnode(data)
+
+#above code is basic traverse and insertdataatposition
+
+def linkingnodefromlist(list):
+    newnode=[list[0]]  #list[0] is nodehead 
+    for i,j in enumerate(list[1::])  #[1::] the reason of 1 is due to above line nodehead already written
+        newnode.append(j)  
+        newnode[i-1].next=newnode[i]  # newnode[list[i-1]].next=newnode[list[i]] left code not stored, deleted during iterating.so make newnode out of loop for storing 
+    node[-2].next=node[-1]  #due to enumerate(list[1::]) newnode full filled with list[j] but i isn't due to starting from 1 so last node linking like this
+    return newnode
+
+
 
