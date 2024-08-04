@@ -1,0 +1,31 @@
+#generate nodes in a loop? 
+#https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop
+'''
+I refer below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
+like node1; 2->4->3 from l1 = [2,4,3] Likewise l2 = [5,6,4] 
+why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew above code was needed. 
+'''
+
+def make_nodes(n):
+    nodes = []
+    nodes.append(Node(0,None))    # head node
+    for i in range(1, n):
+        nodes.append(Node(i, None))
+        nodes[i-1].next = nodes[i]    #somehow link them          
+    return nodes
+
+nodes = make_nodes()
+head = nodes[0]
+second = nodes[1]
+last = nodes[-1]
+
+
+nodes = [Node(i) for i in range(n)]
+for node in nodes:
+    print(node.payload)
+
+
+
+
+#still maintaining...
+
