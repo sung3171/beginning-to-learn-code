@@ -1,16 +1,20 @@
 '''
+the comment trouble out when i got list into solution
+
 below is the reason why you have to turn the list to nodes at compiler
 Code challenge sites like LeetCode, turn the JSON-like input into linked lists for you before calling your solution code. 
 So when you want to run your code locally, outside that framework, you'll have to convert these standard lists to linked lists first, 
 and after you run the code, you'll have to turn the returned linked list back to something printable as well:
 https://stackoverflow.com/questions/72597517/attributeerror-list-object-has-no-attribute-val-in-linked-list-leetcode-cha
 
-generate nodes in a loop? 
-https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop
 
-I referred to below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
-like node1; 2->4->3 from l1 = [2,4,3] Likewise l2 = [5,6,4] 
+i needed nodes like node1; 2->4->3 turned from l1 = [2,4,3] Likewise l2 = [5,6,4]  the comment trouble out when i got list into solution
 why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
+
+I referred to concept from below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
+https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop    generate nodes in a loop? 
+
+let's get started! 
 '''
 
 def make_nodes(n):
@@ -81,4 +85,4 @@ traverse(head2)
 
 #and now you can use these codes to 2. Add Two Numbers in leetcode 
 #https://leetcode.com/problems/add-two-numbers/description/
-#https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-list/   and you can refer to  similar article, I found it a moment ago.
+#https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-list/   and you can refer to a similar article, I found it a moment ago.
