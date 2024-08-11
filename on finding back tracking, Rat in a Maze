@@ -3,12 +3,13 @@ planning to look over more
 
 https://www.geeksforgeeks.org/rat-in-a-maze/
 
+
 # Initialize a string direction which represents all the directions.
-direction = "DLRU"
+direction = "RULD" 
 
 # Arrays to represent change in rows and columns
-dr = [1, 0, 0, -1]
-dc = [0, -1, 1, 0]
+dr = [0, -1, 0, 1]
+dc = [1, 0, -1, 0]
 
 # Function to check if cell(row, col) is inside the maze
 # and unblocked
@@ -72,3 +73,51 @@ if not result:
     print(-1)
 else:
     print(" ".join(result))
+
+now let's started how it works!
+The main point I learned is that there are four directions;up down left right. to know well, on my opinion, let's think about it as counterclockwise.
+maze = [
+    [1, 0, 0, 0],
+    [1, 1, 0, 1],
+    [1, 1, 0, 0],
+    [0, 1, 1, 1]
+] (1 is path, 0 is wall)
+first, we started at (0,0) point and we check where we are going to the next. we iterate total forth because we check it right up left down like as counterclockwise direction. 
+the first iterate i=0's next direction is right but! it's wall and next up is out of range left is same out of range. so we can go to down as next point. and we (0,0) path remain 1(path) to 0(wall).(we consume all i(i=0,1,2,3))
+ and next. we are on the (0,1) point. and we are going to move same as a moment ago right up left down. 
+  first to move to right, due to 1 is a path, we can go immediatly to right. left before spot 1 to 0 and before we go in to recursion we consume i=0(right). (later we return,backtracking we consume all left i=1,2,3 up,left,down.)
+ we can move with this method upto aim point (4,4) and we come out from recursion and we consume left i to find another way until we are going to reach starting point.(when come out from recursion, spot convert 0(wall) to 1(path)) 
+ we can find two ways "DRDDRR"	"DDRDRR"
+ D->DR->DRD->DRDD->...->DRDDRR  and let's come out from recursive. DRDDRR->DRDDR->DRDD->DRDL->DRD->DR->D->DD->DDR->DDRD->DDRDR->DDRDRR
+and come out from recursive one more. while we are on recursive, we consume almost i and left 1 for another way we can reach without exception.
+ that's all these code are constructed!
+
+Now, let's start by understanding how it works! 
+The main point I learned is that there are four directions: up, down, left, and right. 
+To understand this well, in my opinion, we should think about it as counterclockwise. 
+First, we start at the (0,0) point and check where we are going next. 
+We iterate a total of four times, checking in the counterclockwise direction: right, up, left, and down.
+First, to move to the right, since 1 is a path, we can move immediately to the right. 
+Before moving left spot 1 to 0, and before we enter recursion, we already consume i=0 (right). 
+(Later, when we backtrack(come out of recursion), we will consume all remaining directions: i=1 (up), i=2 (left), and i=3 (down).)
+ We can use this method to move up to the target point (4,4). 
+After coming out of recursion, we will consume the left direction i to find another path until we return to the starting point. 
+When we exit recursion, the spot is converted from 0 (wall) to 1 (path). 
+Finally, we find two paths: 'DRDDRR' and 'DDRDRR', and the maze remains as it originally was.
+maze = [
+    [1, 0, 0, 0],
+    [1, 1, 0, 1],
+    [1, 1, 0, 0],
+    [0, 1, 1, 1]
+] 
+Start with D -> DR -> DRD -> DRDD -> ... -> DRDDRR and then exit the recursion. 
+From DRDDRR, we backtrack to DRDDR -> DRDD -> DRDL -> DRD -> DR -> D -> DD -> DDR -> DDRD -> DDRDR -> DDRDRR. 
+After coming out of recursion one more time, we have consumed almost all directions i, leaving 1 for another possible path, which allows us to reach the goal without exceptions. 
+This is how the code is constructed."
+This is why the code was created!
+
+
+
+
+
+
