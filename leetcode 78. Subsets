@@ -1,0 +1,25 @@
+leetcode 78. Subsets
+
+
+txt = "The binary version of {0} is {0:b}"
+print(txt.format(5))
+>>> "{0:b}".format(37)
+'100101'
+>>> x, y, z = 1, 2, 3
+>>> f'{x} {y} {2*z}'
+'1 2 6'
+You can request binary as well:
+>>> f'{z:b}'
+'11'
+Specify the width:
+>>> f'{z:8b}'
+'      11'
+Request zero padding:
+f'{z:08b}'
+'00000011'
+And add common prefix to signify binary number:
+>>> f'0b{z:08b}'
+'0b00000011'
+You can also let Python add the prefix for you but I do not like it so much as the version above because you have to take the prefix into width consideration:
+>>> f'{z:#010b}'
+'0b00000011'
