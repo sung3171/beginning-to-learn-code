@@ -113,11 +113,9 @@ maze = [
 Start with D -> DR -> DRD -> DRDD -> ... -> DRDDRR and then exit the recursion. 
 From DRDDRR, we backtrack to DRDDR -> DRDD -> DRDL -> DRD -> DR -> D -> DD -> DDR -> DDRD -> DDRDR -> DDRDRR. 
 After coming out of recursion one more time, we have consumed almost all directions i, leaving 1 for another possible path, which allows us to reach the goal without exceptions. 
-This is how the code is constructed."
-This is why the code was created!
 
+This is how and why the code is constructed and was created!
 
-
-
+i want to go google to meet chat gpt.
 
 
