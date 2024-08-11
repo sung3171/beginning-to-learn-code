@@ -29,17 +29,24 @@ binary(5)
 and when to erase the '0b', I use this:
 >>> bin(6)[2:]
 '110'
-https://stackoverflow.com/questions/10411085/converting-integer-to-binary-in-python
-https://stackoverflow.com/questions/699866/convert-int-to-binary-string-in-python
+#https://stackoverflow.com/questions/10411085/converting-integer-to-binary-in-python
+#https://stackoverflow.com/questions/699866/convert-int-to-binary-string-in-python
 
 
-
+#returns 1 if both bits are 1: else it returns 0. you can check with below
 for a in range(16):
     for b in range(a+1,16):
         sum = bin(a + b)
         print(a,b,bin(a)[2:],bin(b)[2:],sum[2:])
         if a & b:
             print('check')
+'''
+https://youtu.be/F_UIOvfmsew?si=jt3g6qw0CgxUUKQw&t=360  Bitwise Operators in Python (Part 1)
+returns 1 if both bits are 1: else it returns 0. at least both bits are 1 you can pass the if condition. 
+ex)1100 & 100, 1010 & 10, 1011 & 1, 1011 & 11 all can pass the if condition. you can check with below
+
+essential; now I know & operator just check both bits at same column are 1.if these are 1, it can be true,pass.
+'''
 
 class Solution:
     def subsets(nums):
