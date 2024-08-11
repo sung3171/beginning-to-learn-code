@@ -45,7 +45,7 @@ https://youtu.be/F_UIOvfmsew?si=jt3g6qw0CgxUUKQw&t=360  Bitwise Operators in Pyt
 returns 1 if both bits are 1: else it returns 0. at least both bits are 1 you can pass the if condition. 
 ex)1100 & 100, 1010 & 10, 1011 & 1, 1011 & 11 all can pass the if condition. you can check with below
 
-essential; now I know & operator just check both bits at same column are 1.if these are 1, it can be true,pass.
+essential; now I know & operator just check both bits at same column are 1. if these are 1, it can be true,pass.
 '''
 
 class Solution:
