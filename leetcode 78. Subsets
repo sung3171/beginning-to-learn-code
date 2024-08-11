@@ -48,6 +48,7 @@ ex)1100 & 100, 1010 & 10, 1011 & 1, 1011 & 11 all can pass the if condition. you
 essential; now I know & operator just check both bits at same column are 1. if these are 1, it can be true,pass.
 '''
 
+#Bit Manipulation
 class Solution:
     def subsets(nums):
         n = len(nums)
