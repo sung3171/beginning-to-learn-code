@@ -33,18 +33,13 @@ https://stackoverflow.com/questions/10411085/converting-integer-to-binary-in-pyt
 https://stackoverflow.com/questions/699866/convert-int-to-binary-string-in-python
 
 
-for c in range(5):
-    for d in range(c+1,5):
-        a=bin(c)
-        b=bin(d)
-        sum = bin(int(a, 2) + int(b, 2))
-        print(a,b,sum[2:])
-        a=int(c)
-        b=int(d)
-        
+
+for a in range(16):
+    for b in range(a+1,16):
+        sum = bin(a + b)
+        print(a,b,bin(a)[2:],bin(b)[2:],sum[2:])
         if a & b:
             print('check')
-
 
 class Solution:
     def subsets(nums):
