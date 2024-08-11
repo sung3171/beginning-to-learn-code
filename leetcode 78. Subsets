@@ -23,3 +23,30 @@ And add common prefix to signify binary number:
 You can also let Python add the prefix for you but I do not like it so much as the version above because you have to take the prefix into width consideration:
 >>> f'{z:#010b}'
 '0b00000011'
+binary(5)
+>>> bin(6)
+'0b110'
+and when to erase the '0b', I use this:
+>>> bin(6)[2:]
+'110'
+https://stackoverflow.com/questions/10411085/converting-integer-to-binary-in-python
+https://stackoverflow.com/questions/699866/convert-int-to-binary-string-in-python
+
+
+for c in range(5):
+    for d in range(c+1,5):
+        a=bin(c)
+        b=bin(d)
+        sum = bin(int(a, 2) + int(b, 2))
+        print(a,b,sum[2:])
+        a=int(c)
+        b=int(d)
+        
+        if a & b:
+            print('check')
+
+
+
+
+
+
