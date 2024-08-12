@@ -4,16 +4,16 @@ The reason I investigated this issue is that I checked these problems using a Py
 I realized that what I needed were codes to convert the values in the list into linked nodes. 
 For example, I needed nodes like node1 2->4->3 converted from l1 = [2, 4, 3], and similarly l2 = [5, 6, 4].
 
-below is the reason why you have to turn the list to nodes at compiler
+below is the reason why you need to convert the list to nodes in the compiler
 Code challenge sites like LeetCode, turn the JSON-like input into linked lists for you before calling your solution code. 
 So when you want to run your code locally, outside that framework, you'll have to convert these standard lists to linked lists first, 
 and after you run the code, you'll have to turn the returned linked list back to something printable as well:
 https://stackoverflow.com/questions/72597517/attributeerror-list-object-has-no-attribute-val-in-linked-list-leetcode-cha
 
 
-I referred to concept from below to know linking node from list(or dict) when I were solving 2. Add Two Numbers from leetcode 
+I referred to the concept below to understand how to convert a list (or dict) into linked nodes when solving 2. Add Two Numbers from LeetCode.
 https://stackoverflow.com/questions/35695708/python-is-it-possible-to-generate-nodes-in-a-loop    generate nodes in a loop? 
-let's get started! 
+Let us get into it!
 '''
 
 def make_nodes(n):
@@ -36,7 +36,7 @@ for node in nodes:
 
 
 
-#still maintaining... due to this old military computer down. my written code flew away.
+#still maintaining... due to this old military computer being down, my written code is lost.
 #let's start again
 
 class node():
@@ -83,7 +83,7 @@ head2=node2[0]
 traverse(head1)
 traverse(head2)
 
-#and now you can use these codes to 2. Add Two Numbers in leetcode 
+#and now you can use these codes to 2. Add Two Numbers on leetcode 
 #https://leetcode.com/problems/add-two-numbers/description/
 #https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-list/   and you can refer to a similar article, I found it a moment ago.
 
