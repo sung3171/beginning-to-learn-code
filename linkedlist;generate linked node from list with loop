@@ -2,7 +2,7 @@
 "'list' object has no attribute 'val'" the comment occurs when I use a list in the solution.
 The reason I investigated this issue is that I checked these problems using a Python compiler, but it didn’t work. 
 I realized that what I needed were codes to convert the values in the list into linked nodes. 
-For example, I needed nodes like node1 with the sequence 2->4->3 converted from l1 = [2, 4, 3], and similarly l2 = [5, 6, 4].
+For example, I needed nodes like node1 2->4->3 converted from l1 = [2, 4, 3], and similarly l2 = [5, 6, 4].
 
 below is the reason why you have to turn the list to nodes at compiler
 Code challenge sites like LeetCode, turn the JSON-like input into linked lists for you before calling your solution code. 
