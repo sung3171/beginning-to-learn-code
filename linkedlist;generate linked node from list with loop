@@ -1,5 +1,5 @@
 '''
-"'list' object has no attribute 'val'" the comment trouble out when i got list into solution
+"'list' object has no attribute 'val'" the comment occurs when I use a list in the solution
 why I'd looked for this trouble. I checked this problems at python complier but it didn't work and I knew needed were codes that above value in list to linked nodes. 
 i needed nodes like node1; 2->4->3 turned from l1 = [2,4,3] Likewise l2 = [5,6,4]
 
