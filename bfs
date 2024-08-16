@@ -1,6 +1,5 @@
+#https://www.geeksforgeeks.org/shortest-path-in-grid-with-obstacles/
 Shortest path in grid with obstacles
-
-
 
 from collections import deque
  
@@ -75,17 +74,12 @@ if __name__ == "__main__":
     # Function Call
     print(result)
 
-https://www.geeksforgeeks.org/shortest-path-in-grid-with-obstacles/
 
 
 
 
 
-
-
-
-
-
+#https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 from collections import deque
 
 # BFS from given source s
@@ -143,7 +137,7 @@ if __name__ == "__main__":
 
 
 
-    from collections import deque
+from collections import deque
 
 # BFS from given source s
 def bfs(adj, s, visited):
@@ -191,8 +185,13 @@ add_edge(adj, 4, 5)
 # Perform BFS traversal for the entire graph
 bfs_disconnected(adj)
 
-#https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 
+
+
+
+
+
+#https://www.youtube.com/watch?v=HZ5YTanv5QE
 def bfs(graph, node):
     visited=[]
     queue=[]
@@ -207,9 +206,9 @@ def bfs(graph, node):
             queue.append(n)
             
 #time complexity O(|V|+|E|)
-#https://www.youtube.com/watch?v=HZ5YTanv5QE
 
 
+#https://www.youtube.com/watch?v=CnECo0rUbzo
 def bfs(g,root):
     queue=collections.dequeu([root])
     visited=[]
@@ -223,4 +222,4 @@ def bfs(g,root):
     print(visited)
 bfs(graph,'a')
 
-#https://www.youtube.com/watch?v=CnECo0rUbzo
+
