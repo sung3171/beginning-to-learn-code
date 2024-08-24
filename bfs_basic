@@ -3,6 +3,7 @@ I created the addWithEdgeList without separation. It allows you to link a vertex
 If you don’t want to create a link, leave the list blank.
 '''
 
+https://www.w3schools.com/dsa/dsa_algo_graphs_traversal.php
 class graph:
     def __init__(self,size):
         self.adj=[[0]*size for _ in range(size)]
@@ -65,16 +66,16 @@ class graph:
     def __init__(self,size):
         self.adj=[[0]*size for _ in range(size)]
         self.size=size
-        self.vertex=['']*size
+        self.vertexdata=['']*size
     def add(self,vertex,data):
         if 0<=vertex<self.size:
-            self.vertex[vertex]=data
+            self.vertexdata[vertex]=data
     def edge(self,u,v):
         if 0<= u and v <self.size:
             self.adj[u][v]=1
     def addwithedgelist(self,vertex,data,edgelist):
         if 0<=vertex<self.size:
-            self.vertex[vertex]=data
+            self.vertexdata[vertex]=data
             for col in edgelist:
                 if 0<=col<self.size:
                     self.adj[vertex][col]=1
@@ -83,17 +84,60 @@ class graph:
         for row in self.adj:
             print(' '.join(map(str,row)))
         print("|nvertex data:")
-        for vertex,data in enumerate(self.vertex):
+        for vertex,data in enumerate(self.vertexdata):
             print(f"vertex{vertex}:{data}")
     def dfs(self,startvertexdata):
         visited=[False]*self.size
-        startvertexindex=self.vertexdata.index(statvertex)
-        self.dfsutil(self,startvertex,visited) #note: self is used. perhaps this is because you need to use it for another def function within the class.
-    def dfsutil(self,vertexindex,visited)   
-        visited[vertexindex]=True
-        print(self.vertexdata[vertexindex],end=' ')
+        startvertexindex=self.vertexdata.index(startvertexdata)
+        self.dfsutil(startvertexindex,visited) #note: self is used. perhaps this is because you need to use it for another def function within the class.
+    
+    def dfsutil(self,vertex,visited):   
+        visited[vertex] = True
+        print(self.vertexdata[vertex],end=' ')
         for i in range(self.size):
-            if self.adj[vertexindex][i]==1 and not visited[i]:
+            if self.adj[vertex][i]==1 and not visited[i]:
                 self.dfsutil(i,visited)
+    def bfs(self,startvertexdata):
+        queue=[self.vertexdata.index(startvertexdata)]
+        visited=[False]*self.size
+        visited[queue[0]]=True
+        while queue:
+            currentvertex=queue.pop(0)
+            print(self.vertexdata[currentvertex],end=' ')
+            for i in range(self.size):
+                if self.adj[currentvertex][i]==1 and not visited[i]:
+                    queue.append(i)
+                    visited[i]=True
+
+
+
+#below are functions seprated into add and edge.
+g = graph(7)
+
+g.add(0, 'A')
+g.add(1, 'B')
+g.add(2, 'C')
+g.add(3, 'D')
+g.add(4, 'E')
+g.add(5, 'F')
+g.add(6, 'G')
+
+g.edge(3, 0)  # D -> A
+g.edge(3, 4)  # D -> E
+g.edge(4, 0)  # E -> A
+g.edge(0, 2)  # A -> C
+g.edge(2, 5)  # C -> F
+g.edge(2, 6)  # C -> G
+g.edge(5, 1)  # F -> B
+g.edge(1, 2)  # B -> C
+
+g.print()
+
+g.dfs('D')
+print('\n')
+g.bfs('D')
+
+
+
 
 
