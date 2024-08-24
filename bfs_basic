@@ -20,8 +20,6 @@ class graph:
             for col in edgelist:
                 if 0<=col<self.size:
                     self.adj[vertex][col]=1
-        else:
-            pass
     def print(self):
         print("adjacency matrix:")
         for row in self.adj:
