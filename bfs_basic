@@ -1,0 +1,64 @@
+'''
+I created the addWithEdgeList without separation. It allows you to link a vertex to multiple vertices at once through a list where the indexes of the vertices are grouped. 
+If you don’t want to create a link, leave the list blank.
+'''
+
+class graph:
+    def __init__(self,size):
+        self.adj=[[0]*size for _ in range(size)]
+        self.size=size
+        self.vertex=['']*size
+    def add(self,vertex,data):
+        if 0<=vertex<self.size:
+            self.vertex[vertex]=data
+    def edge(self,u,v):
+        if 0<= u and v <self.size:
+            self.adj[u][v]=1
+    def addwithedgelist(self,vertex,data,edgelist):
+        if 0<=vertex<self.size:
+            self.vertex[vertex]=data
+            for col in edgelist:
+                if 0<=col<self.size:
+                    self.adj[vertex][col]=1
+        else:
+            pass
+    def print(self):
+        print("adjacency matrix:")
+        for row in self.adj:
+            print(' '.join(map(str,row)))
+        print("|nvertex data:")
+        for vertex,data in enumerate(self.vertex):
+            print(f"vertex{vertex}:{data}")
+g = graph(7)
+
+g.addwithedgelist(0, 'A',[2])
+g.addwithedgelist(1, 'B',[2])
+g.addwithedgelist(2, 'C',[5,6])
+g.addwithedgelist(3, 'D',[0,4])
+g.addwithedgelist(4, 'E',[0])
+g.addwithedgelist(5, 'F',[1])
+g.addwithedgelist(6, 'G',[])
+
+g.print()
+
+#below are functions seprated into add and edge.
+g = Graph(7)
+
+g.add(0, 'A')
+g.add(1, 'B')
+g.add(2, 'C')
+g.add(3, 'D')
+g.add(4, 'E')
+g.add(5, 'F')
+g.add(6, 'G')
+
+g.edge(3, 0)  # D -> A
+g.edge(3, 4)  # D -> E
+g.edge(4, 0)  # E -> A
+g.edge(0, 2)  # A -> C
+g.edge(2, 5)  # C -> F
+g.edge(2, 6)  # C -> G
+g.edge(5, 1)  # F -> B
+g.edge(1, 2)  # B -> C
+
+g.print()
