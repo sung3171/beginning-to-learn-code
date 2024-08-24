@@ -52,6 +52,8 @@ original_tuples = [tuple(i.split(",")) for i in original.split("\n")]
 print(original_tuples)
 original_tuples_ans=",".join(map(str,[j for i,j in original_tuples]))
 print(original_tuples_ans)
+original_tuples_ans=",".join(str(j) for i,j in original_tuples)
+print(original_tuples_ans)
 
 original = """0,15
 1,14
