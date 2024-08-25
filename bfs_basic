@@ -139,7 +139,7 @@ print('\n')
 g.bfs('D')
 
 
-It's 1:29pm august 25, 2024.
+It's 1:29pm august 25, 2024.  the end time is 2:28pm
 I added some sentences. Now you can input not only vertexdata but also vertex. If you input a vertex, you can also identify which vertexdata matches the vertex you input.
 class graph:
     def __init__(self,size):
