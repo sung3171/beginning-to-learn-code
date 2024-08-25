@@ -25,7 +25,7 @@ class graph:
         print("adjacency matrix:")
         for row in self.adj:
             print(' '.join(map(str,row)))
-        print("|nvertex data:")
+        print("\nvertex data:")
         for vertex,data in enumerate(self.vertexdata):
             print(f"vertex{vertex}:{data}")
 g = graph(7)
