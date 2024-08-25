@@ -1,3 +1,4 @@
+It's august 24, 2024.
 '''
 I created the addWithEdgeList without separation. It allows you to link a vertex to multiple vertices at once through a list where the indexes of the vertices are grouped. 
 If you don’t want to create a link, leave the list blank.
@@ -138,6 +139,90 @@ print('\n')
 g.bfs('D')
 
 
+It's 1:29pm august 25, 2024.
+I added some sentences. Now you can input not only vertexdata but also vertex. If you input a vertex, you can also identify which vertexdata matches the vertex you input.
+class graph:
+    def __init__(self,size):
+        self.adj=[[0]*size for _ in range(size)]
+        self.size=size
+        self.vertexdata=['']*size
+    def add(self,vertex,data):
+        if 0<=vertex<self.size:
+            self.vertexdata[vertex]=data
+    def edge(self,u,v):
+        if 0<= u and v <self.size:
+            self.adj[u][v]=1
+    def addwithedgelist(self,vertex,data,edgelist):
+        if 0<=vertex<self.size:
+            self.vertexdata[vertex]=data
+            for col in edgelist:
+                if 0<=col<self.size:
+                    self.adj[vertex][col]=1
+    def print(self):
+        print("adjacency matrix:")
+        for row in self.adj:
+            print(' '.join(map(str,row)))
+        print("\nvertex data:")
+        for vertex,data in enumerate(self.vertexdata):
+            print(f"vertex{vertex}:{data}")
+    def dfs(self,startvertexdata_or_startvertex):
+        if isinstance(startvertexdata_or_startvertex,int)==False: #If it is vertexdata, It can pass this if statement. you can code using type functioin. type(startvertexdata_or_startvertex) == int  https://stackoverflow.com/questions/63285426/cant-check-whether-a-number-is-integer-or-not
+           startvertex=self.vertexdata.index(startvertexdata_or_startvertex) #data to int
+        else: # If it can pass else sentence, startvertexdata_or_startvertex is vertex! int! 
+            startvertex=startvertexdata_or_startvertex
+            startvertexdata=self.vertexdata[startvertexdata_or_startvertex] #This sentence aims to determine what data matches your input vertex.
+            print(f'\nstartvertex:startvertexdata={startvertexdata_or_startvertex}:{startvertexdata}')
+        visited=[False]*self.size
+        self.dfsutil(startvertex,visited) 
+    def dfsutil(self,vertex,visited):   
+        visited[vertex] = True
+        print(self.vertexdata[vertex],end=' ')
+        for i in range(self.size):
+            if self.adj[vertex][i]==1 and not visited[i]:
+                self.dfsutil(i,visited)
+                
+    def bfs(self,startvertexdata_or_startvertex):
+        if isinstance(startvertexdata_or_startvertex,int)==False: #If it is vertexdata, it can pass this if statement. you can code using type functioin. type(startvertexdata_or_startvertex) == int 
+           startvertex=self.vertexdata.index(startvertexdata_or_startvertex)
+        else: #startvertexdata_or_startvertex is int!vertex!
+            startvertex=startvertexdata_or_startvertex
+            startvertexdata=self.vertexdata[startvertexdata_or_startvertex] ##This sentence aims to determine what data matches your input vertex.
+            print(f'\nstartvertex:startvertexdata={startvertexdata_or_startvertex}:{startvertexdata_or_startvertex}')
+        queue=[startvertex]
+        visited=[False]*self.size
+        visited[queue[0]]=True
+        while queue:
+            currentvertex=queue.pop(0)
+            print(self.vertexdata[currentvertex],end=' ')
+            for i in range(self.size):
+                if self.adj[currentvertex][i]==1 and not visited[i]:
+                    queue.append(i)
+                    visited[i]=True
 
+g = graph(7)
 
+g.add(0, 'A')
+g.add(1, 'B')
+g.add(2, 'C')
+g.add(3, 'D')
+g.add(4, 'E')
+g.add(5, 'F')
+g.add(6, 'G')
+
+g.edge(3, 0)  # D -> A
+g.edge(3, 4)  # D -> E
+g.edge(4, 0)  # E -> A
+g.edge(0, 2)  # A -> C
+g.edge(2, 5)  # C -> F
+g.edge(2, 6)  # C -> G
+g.edge(5, 1)  # F -> B
+g.edge(1, 2)  # B -> C
+
+g.print()
+
+g.dfs('D')
+g.dfs(3)
+print('\n')
+g.bfs('D')
+g.bfs(3)
 
