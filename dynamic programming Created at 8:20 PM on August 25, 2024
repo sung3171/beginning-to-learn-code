@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=HAA8mgxlov8  Regular Expression Matching - Dynam
 https://www.youtube.com/watch?v=_i4Yxeh5ceQ  Dynamic Programming 1D - Full Course - Python
 https://www.youtube.com/watch?v=qMky6D6YtXU  Dynamic Programming 2D - Full Course - Python
 
-
+It's 17:54pm August 30, 2024.
 class solution:
     def ismatch(self,s,p):
         cache={}
