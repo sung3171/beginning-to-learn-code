@@ -34,3 +34,9 @@ p = "a*"
 a=solution()
 a.ismatch(s,p)
 print(a)
+
+s = "bbc"
+p = "a*b*c"
+a=solution()
+a.ismatch(s,p)
+print(a)
