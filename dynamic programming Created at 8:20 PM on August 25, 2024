@@ -27,3 +27,9 @@ class solution:
             cache[(i,j)]=False
             return False
         return dfs(0,0)
+
+s = "aab"
+p = "a*"
+a=solution()
+a.ismatch(s,p)
+print(a)
