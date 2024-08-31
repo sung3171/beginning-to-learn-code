@@ -30,7 +30,7 @@ class solution:
         return dfs(0,0)
 
 s = "aab"
-p = "a*"
+p = "a*b"
 a=solution()
 a.ismatch(s,p)
 print(a)
