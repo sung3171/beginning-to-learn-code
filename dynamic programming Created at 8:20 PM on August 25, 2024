@@ -6,11 +6,12 @@ https://www.youtube.com/watch?v=HAA8mgxlov8  Regular Expression Matching - Dynam
 https://www.youtube.com/watch?v=_i4Yxeh5ceQ  Dynamic Programming 1D - Full Course - Python
 https://www.youtube.com/watch?v=qMky6D6YtXU  Dynamic Programming 2D - Full Course - Python
 
-It's 17:54pm August 30, 2024.
+It's 17:54 August 30, 2024. I just copy the code below for studying.
+It's 11:15? August 31, 2024. I took naps while studying,It's 17:06 August 31, 2024. 
 class solution:
     def ismatch(self,s,p):
         cache={}
-        def dfs(i,j):
+        def dfs(i,j):주기
             if (i,j) in cache:
                 return cache[(i,j)]
             if i >= len(s) and j >= len(p):
