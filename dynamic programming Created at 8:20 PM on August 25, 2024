@@ -45,12 +45,6 @@ print(a)
 
 
 https://www.youtube.com/watch?v=Ua0GhsJSlWM  Longest Common Subsequence - Dynamic Programming - Leetcode 1143
-https://www.youtube.com/watch?v=Yan0cv2cLy8  Jump Game - Greedy - Leetcode 55
-https://www.youtube.com/watch?v=H9bfqozjoqs  Coin Change - Dynamic Programming Bottom Up - Leetcode 322
-https://www.youtube.com/watch?v=Y0lT9Fck7qI  Climbing Stairs - Dynamic Programming - Leetcode 70 - Python
-https://www.youtube.com/watch?v=73r3KWiEvyk  House Robber - Leetcode 198 - Python Dynamic Programming
-https://www.youtube.com/watch?v=RiPqLDctf48  theprimetime
-
 It starts at 13:38 on September 1, 2024.
 #Both code below have O(m*n) time complexity.
 class solution:
