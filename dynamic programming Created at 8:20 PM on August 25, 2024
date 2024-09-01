@@ -91,7 +91,7 @@ a=solution()
 a.longestcommonsubsequence(text1,text2)
 print(a)
 
-#Just if you want to know how many alphabet match both sides, use this codes.
+#Just if you want to count how many alphabet match both sides, use this codes.
 class solution:
     def longestcommonsubsequence(self, text1: str, text2: str) -> int:
         dp = [0] * len(text1)
