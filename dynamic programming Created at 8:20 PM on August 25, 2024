@@ -51,7 +51,7 @@ https://www.youtube.com/watch?v=Y0lT9Fck7qI  Climbing Stairs - Dynamic Programmi
 https://www.youtube.com/watch?v=73r3KWiEvyk  House Robber - Leetcode 198 - Python Dynamic Programming
 
 It starts at 13:38 on September 1, 2024.
-#Both code below have O(m*n) notation.
+#Both code below have O(m*n) time complexity.
 class solution:
     def longestcommonsubsequence(self,text1,text2):
         dp=[[0 for j in range(len(text2)+1)] for i in range(len(text1)+1)]
