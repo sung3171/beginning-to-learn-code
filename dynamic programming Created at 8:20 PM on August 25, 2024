@@ -90,4 +90,11 @@ a=solution()
 a.longestcommonsubsequence(text1,text2)
 print(a)
 
+text1 = "acbcce"
+text2 = "acce" 
+a=solution()
+a.longestcommonsubsequence(text1,text2)
+print(a)
+
+
 
