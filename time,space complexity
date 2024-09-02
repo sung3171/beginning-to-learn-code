@@ -28,6 +28,10 @@ class Solution:
             reverse = reverse * 10 + x % 10
             x //= 10
         return reverse == x or x == reverse // 10
+Based on the explanation above, one additional insight is that the solution only iterates over half of the digits of x, 
+according to the given code. For instance, if x = 123321, only the last half of the digits, 321, are used in the iteration. 
+However, the time complexity is not affected by constant factors such as addition, subtraction, multiplication, or division by constants. 
+So it has log(x)/2 ≒ log(x) of time complexity. If we substitute, n=log(123)=log(123321)/2=2.5 ≒ log(123321)=5. That is, You can consider it the same.
 
 def example_algorithm(arr):
     total = 0
