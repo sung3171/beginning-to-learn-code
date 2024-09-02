@@ -12,6 +12,12 @@ class Solution:
             reverse=reverse*10+temp%10
             temp//=10
         return reverse==x
+Although x is an integer, it doesn't mean the loop runs x times. 
+As seen in the code, x is divided by 10 in each iteration of the while loop. 
+The loop continues until x is no longer divisible by 10. For example, if x = 12321, then x will be divided by 10 repeatedly, 
+and the loop will run approximately log(x) times. In this case, x // 10 reduces x each time, so the loop iterates about 5 times (log(12321) ≈ 5).
+The space complexity is O(1) because only a constant amount of space is used. 
+Variables like x, temp, and reverse occupy a fixed amount of memory, and their values are updated, but the amount of space used does not depend on the input size.
 
 class Solution:
     def isPalindrome(self, x):
