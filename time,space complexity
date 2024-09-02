@@ -1,5 +1,5 @@
 The start time is around 15:24 on September 2, 2024. The end time is about 18:26 on september 2, 2024
-The start time is 22:03 on september 2, 2024
+The start time is 22:03 on september 2, 2024. The end time is 23:50 on september 2, 2024
 I document my undertand of caculating time complexity and space complexity.
 
 class Solution:
@@ -32,6 +32,7 @@ Based on the explanation above, one additional insight is that the solution only
 according to the given code. For instance, if x = 123321, only the last half of the digits, 321, are used in the iteration. 
 However, the time complexity is not affected by constant factors such as addition, subtraction, multiplication, or division by constants. 
 So it has log(x)/2 ≒ log(x) of time complexity. If we substitute, n=log(123)=log(123321)/2=2.5 ≒ log(123321)=5. That is, You can consider it the same.
+The space complexity is same as above Solution. 
 
 def example_algorithm(arr):
     total = 0
@@ -39,7 +40,8 @@ def example_algorithm(arr):
         for j in range(len(arr)):
             total += arr[i] * arr[j]
     return total
-Note:x=len(arr), The time complexity of this solution is O(x^2) because the nested for loops run a total of x^2 iterations. 
+Note:x=len(arr)
+The time complexity of this solution is O(x^2) because the nested for loops run a total of x^2 iterations. 
 For example, if arr = [1, 2, 3] and x = len(arr) = 3, then the loops iterate 3 * 3 = 9 times.
 The space complexity is O(1) because only a constant amount of space is used. 
 Variables such as total, i, and j are fixed in memory and do not depend on the input size.
@@ -59,9 +61,12 @@ class Solution:
             return self.binarySearch(arr, target, mid + 1, right)
         else:
             return self.binarySearch(arr, target, left, mid - 1)
+Note:x=len(arr)
+The time complexity of this solution is O(log2(x)). 
 
 def factorial(n):
     if n == 0:
         return 1
     else:
         return n * factorial(n - 1)
+It will be used when explaining stack frames.
