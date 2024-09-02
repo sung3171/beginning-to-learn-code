@@ -49,7 +49,7 @@ These variables occupy a fixed amount of memory, and their values are simply upd
 class Solution:
     def binarySearch(self, arr, target, left, right):
         if left > right:
-            return -1  # 타겟 값을 찾지 못한 경우
+            return -1  # The case you can't find target value.
 
         mid = (left + right) // 2
 
