@@ -19,9 +19,10 @@ print(a)
 The time complexity of this solution is O(log(x)) because the while loop runs for the number of digits in the input number 'x'. 
 The space complexity is O(1) because only a constant amount of extra space is used regardless of the input size.
 
+#It only checks half of the digits, unlike the above code, which checks the entire number.
 class Solution:
     def isPalindrome(self,x):
-        if  x<0 or (x!=0 and x%10==0): #I think they write it to be done before iterating.
+        if  x<0 or (x!=0 and x%10==0): #I think he wrote it to be done if the first digit is 0, before iterating.
             return print(False)
         reverse=0
         while x>reverse:
