@@ -1,0 +1,57 @@
+The start time is around 15:24 September 2, 2024.
+I document my undertand of caculating time complexity and space complexity.
+
+class Solution:
+    def isPalindrome(self,x:int)->bool:
+        if x<0:
+            return False
+        temp=x
+        reverse=0
+        while temp>0:
+            reverse=reverse*10+temp%10
+            temp//=10
+        return reverse==x
+The time complexity of this solution is O(log(x)) because x is int like 12321. The while loop runs until n=log(x)=log(12321)≒5 reps.
+The space complexity is O(1) because only a constant amount of extra space is used regardless of the input size.
+
+class Solution:
+    def isPalindrome(self, x):
+        if x < 0 or (x != 0 and x % 10 == 0):
+            return False
+        reverse = 0
+        while x > reverse:
+            reverse = reverse * 10 + x % 10
+            x //= 10
+        return reverse == x or x == reverse // 10
+The time complexity of this solution is O(log(x)) because x is int like 12321. The while loop runs until (n=log(x)=log(12321)≒5)/2 reps. It is reduced due to half its size (n=log(x)=log(12321)≒5)/2, which is equivalent to the number n=log(x)=log(12321)≒5 because adding,minusing,crossing and dividing constance is ignore.
+The space complexity is O(1) because only a constant amount of extra space is used regardless of the input size.
+
+def example_algorithm(arr):
+    total = 0
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            total += arr[i] * arr[j]
+    return total
+x=len(arr) so the time complexity of this solution is O(x^2) because 'arr' turn to what we want to calculate big o x=len(arr). 
+The nested for loop runs until n=x^2 reps. If arr=[1,2,3], x=len(arr)=3 so it iterate n=3*3=3^2 reps.
+The space complexity is O(1) because only a constant amount of extra space is used like total which is fixed in memory. 
+That is , regardless of the input size. It's not recalled several time like recursion. This variable just fixed in one memory, that is say so that is constant, just accept and changed by code total += arr[i] * arr[j]
+
+class Solution:
+    def binarySearch(self, arr, target, left, right):
+        if left > right:
+            return -1  # 타겟 값을 찾지 못한 경우
+
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            return self.binarySearch(arr, target, mid + 1, right)
+        else:
+            return self.binarySearch(arr, target, left, mid - 1)
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
