@@ -85,14 +85,16 @@ So you can predict thorough logarism how many times will it run..
 [0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) 회 계속.. 
 그래서 넌 로그함수를 통해 얼마나 많이 실행될지를 예측할수있어. 를 영어로 표현한건데 부자연스러워?
 
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-It will be used when explaining stack frames.
+Your description is mostly clear but could be refined for better readability and natural flow. Here’s a revised version:
 
+This algorithm first explores the middle point of the input array, then it explores the middle point of the remaining half of the array, 
+and continues in this manner until the array can no longer be divided by 2. 
+In other words, you can define how many times this process will run as n=log2(x) times. 
+For example, consider the arrayarr=[0,1,2,3,4,5,6,7]. First, it searches the midpoint of the entire array:(0+8)//2=4. 
+Next, it searches the midpoint of the left half of the array:(0+4)//2=2. 
+ Then, it searches the midpoint of the new left half:(0+2)//2=1, and finally,(0+1)//2=0.
+In the worst case, this code can run a total of 4 times. Therefore, you can predict how many times it will run using logarithms.
 
-
+This revision improves clarity and flow, making the explanation easier to follow.
 
 
