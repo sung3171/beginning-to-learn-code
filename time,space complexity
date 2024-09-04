@@ -92,6 +92,12 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n - 1)
+ Before discussing stack frames, let's address the time and space complexity of this solution. 
+The time complexity are O(n). This is because the function will run n times, corresponding to the depth of the recursion. 
+The space complexity refers to the count of stack frames. The depth of recursion, which determines the size of the stack frames, is also O(n).
 
+ A stack frame is a memory block created for each recursion. It manages parameters, local variables, and the return address. 
+ In this case, the function returns the result of the factorial, and each new return generates a new stack frame. 
+The stack frame manages the parameter n in this example, but there are no local variables and it also stores the return address. 
 
 
