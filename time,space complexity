@@ -69,14 +69,22 @@ class Solution:
         else:
             return self.binarySearch(arr, target, left, mid - 1)
 Note:x=len(arr)
-The time complexity of this solution is O(log2(x)). 
-This algorithm first explores the middle point of the input array, then it explores the middle point of the remaining half of the array, 
+ The time complexity of this solution is O(log2(x)). 
+ This algorithm first explores the middle point of the input array, then it explores the middle point of the remaining half of the array, 
 and continues in this manner until the array can no longer be divided by 2. 
-In other words, you can define how many times this process will run as n=log2(x) times. 
-For example, consider the arrayarr=[0,1,2,3,4,5,6,7]. First, it searches the midpoint of the entire array:(0+8)//2=4. 
+ In other words, you can define how many times this process will run as n=log2(x) times. 
+ For example, consider the arrayarr=[0,1,2,3,4,5,6,7]. First, it searches the midpoint of the entire array:(0+8)//2=4. 
 Next, it searches the midpoint of the left half of the array:(0+4)//2=2. 
- Then, it searches the midpoint of the new left half:(0+2)//2=1, and finally,(0+1)//2=0.
-In the worst case, this code can run a total of 4 times. Therefore, you can predict how many times it will run using logarithms.
+Then, it searches the midpoint of the new left half:(0+2)//2=1, and finally,(0+1)//2=0.
+ In the worst case, this code can run a total of 4 times. Therefore, you can predict how many times it will run using logarithms.
 ;[]~[0]: count(arr);2^0~2^1-1 nmax=1=log2(2) times. [0,1]~[0,1,2]: count(arr);2^1~2^2-1 nmax=2=log2(4) times. 
 [0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) times and continues in this manner..
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
 
