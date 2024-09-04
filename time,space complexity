@@ -81,6 +81,11 @@ Then, it searches the midpoint of the new left half:(0+2)//2=1, and finally,(0+1
  In the worst case, this code can run a total of 4 times. Therefore, you can predict how many times it will run using logarithms.
 ;[]~[0]: count(arr);2^0~2^1-1 nmax=1=log2(2) times. [0,1]~[0,1,2]: count(arr);2^1~2^2-1 nmax=2=log2(4) times. 
 [0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) times and continues in this manner..
+ The space complexity is O(log(x)) because of the stack frames used in recursion.
+Each recursive call creates a new stack frame, which means that variables like arr, target, left, and right occupy memory with each new stack frame. 
+The amount of memory used depends on the depth of the recursion, which is O(log(x)) in this case. 
+Therefore, similar to the time complexity, the space complexity is also O(log(x)).
+
 
 def factorial(n):
     if n == 0:
