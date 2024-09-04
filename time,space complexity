@@ -13,11 +13,12 @@ class Solution:
             reverse=reverse*10+temp%10
             temp//=10
         return reverse==x
-Although x is an integer, it doesn't mean the loop runs x times. 
+ The time complexity of this solution is O(log(x)).
+ Although x is an integer, it doesn't mean the loop runs x times. 
 As seen in the code, x is divided by 10 in each iteration of the while loop. 
 The loop continues until x is no longer divisible by 10. For example, if x = 12321, then x will be divided by 10 repeatedly, 
 and the loop will run approximately log(x) times. In this case, x // 10 reduces x each time, so the loop iterates about 5 times (log(12321) ≈ 5).
-The space complexity is O(1) because only a constant amount of space is used. 
+ The space complexity is O(1) because only a constant amount of space is used. 
 Variables like x, temp, and reverse occupy a fixed amount of memory, and their values are updated, but the amount of space used does not depend on the input size.
 
 class Solution:
@@ -29,11 +30,11 @@ class Solution:
             reverse = reverse * 10 + x % 10
             x //= 10
         return reverse == x or x == reverse // 10
-Based on the explanation above, one additional insight is that the solution only iterates over half of the digits of x, 
+ Based on the explanation above, one additional insight is that the solution only iterates over half of the digits of x, 
 according to the given code. For instance, if x = 123321, only the last half of the digits, 321, are used in the iteration. 
 However, the time complexity is not affected by constant factors such as addition, subtraction, multiplication, or division by constants. 
 So it has log(x)/2 ≒ log(x) of time complexity. If we substitute, n=log(123)=log(123321)/2=2.5 ≒ log(123321)=5. That is, You can consider it the same.
-The space complexity is same as above Solution. 
+ The space complexity is same as above Solution. 
 
 def example_algorithm(arr):
     total = 0
@@ -42,9 +43,9 @@ def example_algorithm(arr):
             total += arr[i] * arr[j]
     return total
 Note:x=len(arr)
-The time complexity of this solution is O(x^2) because the nested for loops run a total of x^2 iterations. 
+ The time complexity of this solution is O(x^2) because the nested for loops run a total of x^2 iterations. 
 For example, if arr = [1, 2, 3] and x = len(arr) = 3, then the loops iterate 3 * 3 = 9 times.
-The space complexity is O(1) because only a constant amount of space is used. 
+ The space complexity is O(1) because only a constant amount of space is used. 
 Variables such as total, i, and j are fixed in memory and do not depend on the input size.
 They are not repeatedly created or destroyed like in recursion, meaning no additional stack frames are created (I will explain stack frames later). 
 These variables occupy a fixed amount of memory, and their values are simply updated by the code total += arr[i] * arr[j].
@@ -70,7 +71,7 @@ class Solution:
         else:
             return self.binarySearch(arr, target, left, mid - 1)
 Note:x=len(arr)
- The time complexity of this solution is O(log2(x)). 
+ The time complexity of this solution is O(log2(x)). We often refer to it as O(log(x)).
  This algorithm first explores the middle point of the input array, then it explores the middle point of the remaining half of the array, 
 and continues in this manner until the array can no longer be divided by 2. 
  In other words, you can define how many times this process will run as n=log2(x) times. 
