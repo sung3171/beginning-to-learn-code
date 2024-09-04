@@ -1,6 +1,6 @@
 The start time is around 15:24 on September 2, 2024. The end time is about 18:26 on september 2, 2024
 The start time is 22:03 on september 2, 2024. The end time is 23:50 on september 2, 2024
-The start time is 14:01 on September 4, 2024.
+The start time is 14:01 on September 4, 2024. The end time is 17:41 on September 4, 2024.
 I document my undertand of caculating time complexity and space complexity.
 
 class Solution:
