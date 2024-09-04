@@ -70,23 +70,6 @@ class Solution:
             return self.binarySearch(arr, target, left, mid - 1)
 Note:x=len(arr)
 The time complexity of this solution is O(log2(x)). 
-It first explore middle point of input array and second it explore middle point of lest half of array ang same way and so on.. 
-until array no longer divisible by 2 .. That is say so, you can define how many times will it be run as n=log2(x) times. 
-For example, let arr=[0,1,2,3,4,5,6,7]. First the point search number (0+8)//2=4 and next the point search number (0+4)//2=2 
-and next the point search number (0+2)//2=1 and next the point search number (0+1)//2=0. This code can run total 4 times, considered worst case. 
-[]~[0]: count(arr);2^0~2^1-1 nmax=1=log2(2) times. [0,1]~[0,1,2]: count(arr);2^1~2^2-1 nmax=2=log2(4) times. 
-[0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) times and so on.. 
-So you can predict thorough logarism how many times will it run.. 
-이건 처음 어레이 입력의 중간을 탐색하고 두번째로 이건 남은 어레이의 반의 중간을 탐색하고 같은방식으로 계속.. 
-어레이가 2로 더이상 나눠지지 않을때까지.. 그말은, 넌 n=log2(x) 회로 얼마나 많이 실행될지 정의할수있어. 
-예를 들어, arr=[0,1,2,3,4,5,6,7]로 두자. 처음 그 포인트는 (0+8)//2=4 를 탐색하고 다음은 그 포인트는 (0+4)//2=2 를 탐색하고 
-다음은 그 포인트는 (0+2)//2=1 를 탐색하고 다음은 그 포인트는 (0+1)//2=0 를 탐색해. 이 코드는 최악의 경우를 고려해 총 4회 실행 가능해.   
-[]~[0]: count(arr);2^0~2^1-1 nmax=1=log2(2) 회. [0,1]~[0,1,2]: count(arr);2^1~2^2-1 nmax=2=log2(4) 회. 
-[0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) 회 계속.. 
-그래서 넌 로그함수를 통해 얼마나 많이 실행될지를 예측할수있어. 를 영어로 표현한건데 부자연스러워?
-
-Your description is mostly clear but could be refined for better readability and natural flow. Here’s a revised version:
-
 This algorithm first explores the middle point of the input array, then it explores the middle point of the remaining half of the array, 
 and continues in this manner until the array can no longer be divided by 2. 
 In other words, you can define how many times this process will run as n=log2(x) times. 
@@ -96,7 +79,4 @@ Next, it searches the midpoint of the left half of the array:(0+4)//2=2.
 In the worst case, this code can run a total of 4 times. Therefore, you can predict how many times it will run using logarithms.
 ;[]~[0]: count(arr);2^0~2^1-1 nmax=1=log2(2) times. [0,1]~[0,1,2]: count(arr);2^1~2^2-1 nmax=2=log2(4) times. 
 [0,1,2,3]~[0,1,2,3,4,5,6]: count(arr);2^2~2^3-1, nmax=3=log2(8) times and continues in this manner..
-
-This revision improves clarity and flow, making the explanation easier to follow.
-
 
