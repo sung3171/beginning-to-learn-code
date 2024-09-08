@@ -13,9 +13,10 @@ a = input()
 b=''
 for i,word in enumerate(a):
     if word.isupper():
-        a[i]=a[i].replace(a[i], a[i].lower())
+        a=a.replace(word, word.lower())
     else:
-        a[i]=a[i].replace(a[i], a[i].upper())
+        a=a.replace(word, word.upper())
+#a='add' 
        
     
 https://stackoverflow.com/questions/72604976/loop-through-a-string-with-variable-and-replace-an-uppercase-it-with-in-python    
