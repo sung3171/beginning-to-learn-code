@@ -7,5 +7,22 @@ for i,word in enumerate(a):
         
     else:
         b+=a[i].upper()
+
+
+a = input()
+b=''
+for i,word in enumerate(a):
+    if word.isupper():
+        a[i]=a[i].replace(a[i], a[i].lower())
+    else:
+        a[i]=a[i].replace(a[i], a[i].upper())
        
     
+https://stackoverflow.com/questions/72604976/loop-through-a-string-with-variable-and-replace-an-uppercase-it-with-in-python    
+string = "hOw Are yOu?"
+for x in string:
+    if x.isupper():
+        string = string.replace(x, "#")
+        print(string)
+    else:
+        print(string)
