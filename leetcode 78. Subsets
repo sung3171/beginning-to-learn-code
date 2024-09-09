@@ -39,13 +39,17 @@ for a in range(16):
         sum = bin(a + b)
         print(a,b,bin(a)[2:],bin(b)[2:],sum[2:])
         if a & b:
-            print('check')
+            print('check',bin(a & b)[2:],a & b)
 '''
 https://youtu.be/F_UIOvfmsew?si=jt3g6qw0CgxUUKQw&t=360  Bitwise Operators in Python (Part 1)
 returns 1 if both bits are 1: else it returns 0. at least both bits are 1 you can pass the if condition. 
-ex)1100 & 100, 1010 & 10, 1011 & 1, 1011 & 11 all can pass the if condition. you can check with below
+ex)1100 & 100 = 100, 1010 & 10 = 10, 1011 & 1 = 1, 1011 & 11 = 11 all can pass the if condition. 
+1100 & 10 = 0, 1010 & 100 = 0 , 1101 & 10 = 0, 10 & 1 = 0 all can not pass the if condition.
+you can check with below
 
-Note: now you understand that the & operator checks whether both bits in the same position are 1. If both are 1, the result is true. 
+Note: now you understand that the & operator checks whether both bits in the same position are 1. If , at least, both are 1, the result is 1 at that positon.
+Else case is all 0, so it can not pass IF condition.
+(Numbers. In Python, the integer 0 is always False , while every other number, including negative numbers, are True.)  https://www.learnpython.dev/02-introduction-to-python/090-boolean-logic/10-truthiness/
 you can use it mixed with if statment!
 '''
 
