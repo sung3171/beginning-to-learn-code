@@ -27,3 +27,7 @@ for x in string:
         print(string)
     else:
         print(string)
+
+''.join([i if not i.isupper() else '#' for i in string])
+print(''.join(x.upper() if x == x.lower() else x.lower() for x in input()))
+https://school.programmers.co.kr/learn/courses/30/lessons/181949/solution_groups?language=python3  대소문자 바꿔서 출력하기
