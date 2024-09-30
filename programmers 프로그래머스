@@ -135,3 +135,14 @@ def solution(myString, pat):
     return min(1, myString.lower().find(pat.lower()) + 1)
 Note:find function
 The end time is about 15:30 on Sunday, September 29, 2024.
+
+
+
+https://school.programmers.co.kr/learn/courses/30/lessons/181870/solution_groups?language=python3
+ad 제거하기
+def solution(strArr):
+    return list(filter(lambda x:'ad' not in x, strArr))
+Note:filter
+
+
+
