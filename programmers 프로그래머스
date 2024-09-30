@@ -202,7 +202,7 @@ def solution(todo_list, finished):
         if int(s)==0:
             answer.append(todo_list[i])
     return answer
-Note:finished=[true, false, true, false] treat with int funtion
+Note:finished=[true, false, true, false], handle with int funtion
 def solution(todo_list, finished):
     return [work for idx, work in enumerate(todo_list) if not finished[idx]]
 
