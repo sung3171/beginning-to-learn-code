@@ -212,7 +212,29 @@ When I see ChatGPT, I'm encouraged by its depth..
 
 
 
+It's 03:09pm on Tuseday, October 1, 2024.
+def solution(arr):
+    stk=[]
+    for i in range(len(arr)):
+        if not stk:
+            stk.append(arr[i])
+            continue
+        if arr[i]!=stk[-1]:
+            stk.append(arr[i])
+        else:
+            stk.pop()
+    return [-1] if not stk else stk
 
+def solution(arr):
+    stk = []
+    for i in range(len(arr)):
+        if stk and stk[-1] == arr[i]:
+            stk.pop()
+        else:
+            stk.append(arr[i])
+
+    return stk or [-1]
+Note: stk and stk[-1] == arr[i]:,  return stk or [-1]
 
 
 
